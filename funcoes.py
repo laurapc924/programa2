@@ -26,5 +26,37 @@ def remover_dado(dadosrolados, dadosnoestoque, indice):
     listafinal.append(dadosnoestoque)
     return listafinal 
 
+def calcula_pontos_regra_simples (listanum):
+    dicionario = {} 
+    soma1 = 0
+    soma2 = 0
+    soma3 = 0
+    soma4 = 0 
+    soma5 = 0
+    soma6 = 0 
+    for i in range(len(listanum)):
+        if listanum[i] == 1:
+            soma1 = soma1 + 1 
+        dicionario[1] = soma1 
+        if listanum[i] == 2: 
+            soma2 = soma2 + 2
+        dicionario[2] = soma2 
+        if listanum[i] == 3:
+            soma3 = soma3 + 3
+        dicionario[3] = soma3 
+        if listanum[i] == 4:
+            soma4 = soma4 + 4  
+        dicionario[4] = soma4  
+        if listanum[i] == 5:
+            soma5 = soma5 + 5 
+        dicionario[5] = soma5 
+        if listanum[i] == 6:
+            soma6 = soma6 + 6 
+        dicionario[6] = soma6 
+        
+    return dicionario 
+        
+        
+
 
 

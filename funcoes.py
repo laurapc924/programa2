@@ -53,9 +53,15 @@ def calcula_pontos_regra_simples (listanum):
         if listanum[i] == 6:
             soma6 = soma6 + 6 
         dicionario[6] = soma6 
-        
+
     return dicionario 
         
+
+def calcula_pontos_soma (listadenum):
+    soma = 0 
+    for i in range(len(listadenum)):
+        soma = soma + listadenum[i] 
+    return soma 
         
 
 

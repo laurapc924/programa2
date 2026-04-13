@@ -18,8 +18,13 @@ def guardar_dado(dadosrolados, dadosnoestoque, indice):
     listacompleta.append(dadosnoestoque)
     return listacompleta 
 
-
-
+def remover_dado(dadosrolados, dadosnoestoque, indice):
+    listafinal = [] 
+    dadosrolados.append(dadosnoestoque[indice])
+    del dadosnoestoque[indice]
+    listafinal.append(dadosrolados)
+    listafinal.append(dadosnoestoque)
+    return listafinal 
 
 
 

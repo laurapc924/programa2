@@ -84,6 +84,29 @@ def calcula_pontos_sequencia_alta (listadenum):
         return 30
     else:
         return 0
+    
+def calcula_pontos_full_house(listadenum):
+    soma=0
+    for i in range(len(listadenum)):
+        soma+=listadenum[i]
+    
+    contagem={}
+    checagem=[]
+    for i in range(len(listadenum)):
+        if listadenum[i] not in checagem:
+            checagem.append(listadenum[i])
+            contagem[listadenum[i]]=0
+            contagem[listadenum[i]]+=1
+        else: 
+            contagem[listadenum[i]]+=1                
+    for numero,frequencia in contagem.items():
+        if frequencia==3 or frequencia==2:
+            continue 
+        else:
+            return 0
+    return soma 
+
+
 
 
 

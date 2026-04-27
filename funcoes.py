@@ -106,7 +106,26 @@ def calcula_pontos_full_house(listadenum):
             return 0
     return soma 
 
+def calcula_pontos_quadra(lista):
+    contagem={}
+    soma=0
+    quadra = False
+    for i in range(len(lista)):
+        soma+=lista[i]
 
+    for i in range(len(lista)):
+        if lista[i] not in contagem:
+            contagem[lista[i]]=1
+        else:
+            contagem[lista[i]]+=1
 
+    for chave,valor in contagem.items():
+        if valor >= 4 :
+            quadra=True
+    if quadra == True :
+        return soma
+    else:
+        return 0
 
-
+    
+            

@@ -162,3 +162,18 @@ def calcula_pontos_regra_avancada(lista):
     resultado["sem_combinacao"]=p6
 
     return resultado
+
+def faz_jogada(lista, categoria, cartela):
+    ponto_simples= calcula_pontos_regra_simples(lista)
+    ponto_avancado = calcula_pontos_regra_avancada(lista)
+    
+    s= cartela['regra_simples']
+    a=cartela['regra_avancada']
+
+    if categoria in a:
+        a[categoria]= ponto_avancado[categoria]
+    elif int(categoria) in s:
+        s[int(categoria)]=ponto_simples[int(categoria)]
+
+
+    return cartela

@@ -127,5 +127,21 @@ def calcula_pontos_quadra(lista):
     else:
         return 0
 
+def calcula_pontos_quina(lista):
+    contagem={}
     
-            
+    quina = False
+
+    for i in range(len(lista)):
+        if lista[i] not in contagem:
+            contagem[lista[i]]=1
+        else:
+            contagem[lista[i]]+=1
+
+    for chave,valor in contagem.items():
+        if valor >= 5 :
+            quina=True
+    if quina == True :
+        return 50 
+    else:
+        return 0
